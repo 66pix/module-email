@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bluebird": "registry:npm/bluebird#3.3.4+20160406213700"
+  },
+  "ambientDependencies": {
+    "convict": "registry:dt/convict#0.6.0+20160317120654",
+    "email-templates": "registry:dt/email-templates#0.0.0+20160316155526"
+  }
+}
