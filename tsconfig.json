@@ -1,11 +1,5 @@
 {
   "files": [
-    "typings-custom/code.d.ts",
-    "typings-custom/email-templates.d.ts",
-    "typings/main/definitions/bluebird/index.d.ts",
-    "typings/mocha/mocha-node.d.ts",
-    "typings/mailparser/mailparser.d.ts",
-    "typings/nodemailer/nodemailer.d.ts",
     "index.ts",
     "test/mail/email-rendering.ts"
   ],
@@ -13,7 +7,8 @@
     "module": "commonjs",
     "target": "es5",
     "noImplicitAny": false,
-    "sourceMap": false
+    "sourceMap": false,
+    "outDir": "build"
   },
   "exclude": [
     "node_modules"

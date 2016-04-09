@@ -1,5 +1,3 @@
-import Promise = require('bluebird');
-import { IMailerSentMessageInfo } from './types';
 import { IMailerOptions } from './types';
-declare let mailer: (options: IMailerOptions) => Promise<IMailerSentMessageInfo>;
+declare let mailer: (options: IMailerOptions) => any;
 export default mailer;

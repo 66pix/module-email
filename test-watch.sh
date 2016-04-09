@@ -38,7 +38,7 @@ export EMAIL_FROM="testing@66pix.com"
 
 mkdir -p coverage
 nodemon -e ts \
-  -x 'npm run build && ./node_modules/.bin/istanbul cover --include-all-sources -x gulpfile.js node_modules/.bin/_mocha -- --timeout 15000 --recursive --reporter spec test/'
+  -x 'npm run build && ./node_modules/.bin/istanbul cover --include-all-sources -x gulpfile.js node_modules/.bin/_mocha -- --timeout 15000 --recursive --reporter spec build/test/'
 
 node_modules/.bin/istanbul report html
 node_modules/.bin/istanbul report text-summary > coverage/text-summary.txt

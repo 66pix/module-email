@@ -1,3 +1,7 @@
+/// <reference path="typings/main/definitions/bluebird/index.d.ts" />
+/// <reference path="typings-custom/email-templates.d.ts" />
+/// <reference path="typings/nodemailer/nodemailer.d.ts" />
+
 import config = require('./config');
 import path = require('path');
 import emailTemplates = require('email-templates');
@@ -25,7 +29,7 @@ if (config.get('NODE_ENV') === 'production') {
   transporter = nodemailer.createTransport(stubTransport()) as nodemailer.Transporter;
 }
 
-let templatePath = path.join(__dirname, './templates/email/layout/');
+let templatePath = path.join(__dirname, '/../templates/email/layout/');
 let mailer = (options: IMailerOptions): Promise<IMailerSentMessageInfo> => {
   options.from = config.get('EMAIL_FROM');
   options.content.baseUrl = 'https://66pix.com/';
