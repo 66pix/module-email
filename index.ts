@@ -9,6 +9,15 @@ let EmailTemplate = emailTemplates.EmailTemplate;
 import Promise = require('bluebird');
 import nodemailer = require('nodemailer');
 
+export interface IMailerSentMessageInfo {
+  messageId: string;
+  envelope: any;
+  accepted: string[];
+  rejected: string[];
+  pending?: string[];
+  response: string;
+}
+
 let transporter;
 /* istanbul ignore if  */
 if (config.get('NODE_ENV') === 'production') {
@@ -26,7 +35,7 @@ if (config.get('NODE_ENV') === 'production') {
   transporter = nodemailer.createTransport(stubTransport()) as nodemailer.Transporter;
 }
 
-interface IMailerOptionsContent {
+export interface IMailerOptionsContent {
   subject: string;
   baseUrl?: string;
   html: string;
@@ -34,7 +43,7 @@ interface IMailerOptionsContent {
   [s: string]: any;
 }
 
-interface IMailerOptions {
+export interface IMailerOptions {
   to: string;
   subject: string;
   text?: string;
@@ -44,7 +53,7 @@ interface IMailerOptions {
 }
 
 let templatePath = path.join(__dirname, './templates/email/layout/');
-export = (options: IMailerOptions): Promise<nodemailer.SentMessageInfo> => {
+export let mailer = (options: IMailerOptions): Promise<IMailerSentMessageInfo> => {
   options.from = config.get('EMAIL_FROM');
   options.content.baseUrl = 'https://66pix.com/';
 
@@ -64,5 +73,5 @@ export = (options: IMailerOptions): Promise<nodemailer.SentMessageInfo> => {
       });
     });
   });
-}
+};
 
