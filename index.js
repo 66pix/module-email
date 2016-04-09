@@ -1,7 +1,7 @@
 'use strict';
 
 /* istanbul ignore next */
-var mailer = require('build/index');
+var mailer = require('./build/index');
 
 /* istanbul ignore next */
-module.exports = mailer;
+module.exports = mailer.default;
