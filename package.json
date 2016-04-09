@@ -6,7 +6,6 @@
     "url": "git+https://github.com/66pix/module-email.git"
   },
   "description": "Email sending for 66pix",
-  "main": "index.js",
   "license": "UNLICENSED",
   "engine": {
     "node": "5"
