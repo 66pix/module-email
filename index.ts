@@ -10,11 +10,8 @@ import Promise = require('bluebird');
 import nodemailer = require('nodemailer');
 
 let transporter;
-/* istanbul ignore else  */
-if (config.get('NODE_ENV') === 'development') {
-  let stubTransport = require('nodemailer-stub-transport');
-  transporter = nodemailer.createTransport(stubTransport()) as nodemailer.Transporter;
-} else {
+/* istanbul ignore if  */
+if (config.get('NODE_ENV') === 'production') {
   transporter = nodemailer.createTransport({
     secure: true,
     port: config.get('EMAIL_PORT'),
@@ -24,6 +21,9 @@ if (config.get('NODE_ENV') === 'development') {
       pass: config.get('EMAIL_PASSWORD')
     }
   });
+} else {
+  let stubTransport = require('nodemailer-stub-transport');
+  transporter = nodemailer.createTransport(stubTransport()) as nodemailer.Transporter;
 }
 
 interface IMailerOptionsContent {
