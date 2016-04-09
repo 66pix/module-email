@@ -52,4 +52,4 @@ let mailer = (options: IMailerOptions): Promise<IMailerSentMessageInfo> => {
   });
 };
 
-export default mailer;
+export = mailer;
