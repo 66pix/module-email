@@ -3,7 +3,7 @@
 /// <reference path="../../typings/mailparser/mailparser.d.ts" />
 
 import Code = require('code');
-import mailer = require('../../index');
+import mailer from '../../index';
 import mailparser = require('mailparser');
 let expect = Code.expect;
 
