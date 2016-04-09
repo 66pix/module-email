@@ -29,6 +29,8 @@ if (config.get('NODE_ENV') === 'development') {
 interface IMailerOptionsContent {
   subject: string;
   baseUrl?: string;
+  html: string;
+  text: string;
   [s: string]: any;
 }
 
@@ -37,17 +39,17 @@ interface IMailerOptions {
   subject: string;
   text?: string;
   html?: string;
-  content: IMailerOptionsContent;
   from?: string;
+  content: IMailerOptionsContent;
 }
 
-let templatePath = path.join(__dirname, './templates/email/views');
-export = (templateName: string, options: IMailerOptions): Promise<nodemailer.SentMessageInfo> => {
+let templatePath = path.join(__dirname, './templates/email/layout/');
+export = (options: IMailerOptions): Promise<nodemailer.SentMessageInfo> => {
   options.from = config.get('EMAIL_FROM');
   options.content.baseUrl = 'https://66pix.com/';
 
   return new Promise<nodemailer.SentMessageInfo>(function(resolve, reject) {
-    let template = new EmailTemplate(path.join(templatePath, templateName));
+    let template = new EmailTemplate(templatePath);
 
     template.render(options.content)
     .then(function(result) {
@@ -60,6 +62,9 @@ export = (templateName: string, options: IMailerOptions): Promise<nodemailer.Sen
         }
         return resolve(info);
       });
+    })
+    .catch(function(error) {
+      console.log(error);
     });
   });
 }
