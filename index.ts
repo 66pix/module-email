@@ -62,9 +62,6 @@ export = (options: IMailerOptions): Promise<nodemailer.SentMessageInfo> => {
         }
         return resolve(info);
       });
-    })
-    .catch(function(error) {
-      console.log(error);
     });
   });
 }
