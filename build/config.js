@@ -1,4 +1,4 @@
-/// <reference path="typings/main/ambient/convict/index.d.ts" />
+/// <reference path="../typings/main/ambient/convict/index.d.ts" />
 "use strict";
 var convict = require('convict');
 var config = convict({

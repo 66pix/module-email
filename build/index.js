@@ -1,6 +1,6 @@
-/// <reference path="typings/main/definitions/bluebird/index.d.ts" />
-/// <reference path="typings-custom/email-templates.d.ts" />
-/// <reference path="typings/nodemailer/nodemailer.d.ts" />
+/// <reference path="../typings/main/definitions/bluebird/index.d.ts" />
+/// <reference path="../typings-custom/email-templates.d.ts" />
+/// <reference path="../typings/nodemailer/nodemailer.d.ts" />
 "use strict";
 var config = require('./config');
 var path = require('path');
