@@ -14,7 +14,7 @@
   "scripts": {
     "lint": " tslint -c tslint.json --exclude 'typings/**/*' --exclude 'node_modules/**/*' '**/*.ts'",
     "typings-install": "typings install && tsd install",
-    "build": "tsc index.ts test/**/*.ts -m commonjs --sourcemap",
+    "build": "tsc",
     "test": "docker-compose run test /srv/www/test.sh",
     "test-watch": "docker-compose run test /srv/www/test-watch.sh",
     "coverage-average": "coverage-average coverage/text-summary.txt --limit 90"

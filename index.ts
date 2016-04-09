@@ -1,7 +1,3 @@
-/// <reference path="typings/main/definitions/bluebird/index.d.ts" />
-/// <reference path="typings-custom/email-templates.d.ts" />
-/// <reference path="typings/nodemailer/nodemailer.d.ts" />
-
 import config = require('./config');
 import path = require('path');
 import emailTemplates = require('email-templates');

@@ -1,11 +1,21 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "noImplicitAny": false,
-        "sourceMap": false
-    },
-    "exclude": [
-        "node_modules"
-    ]
+  "files": [
+    "typings-custom/code.d.ts",
+    "typings-custom/email-templates.d.ts",
+    "typings/main/definitions/bluebird/index.d.ts",
+    "typings/mocha/mocha-node.d.ts",
+    "typings/mailparser/mailparser.d.ts",
+    "typings/nodemailer/nodemailer.d.ts",
+    "index.ts",
+    "test/mail/email-rendering.ts"
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": false
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
