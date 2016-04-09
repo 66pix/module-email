@@ -19,6 +19,15 @@
     },
     "nodemailer/nodemailer-types.d.ts": {
       "commit": "ec9eb4b28c74665a602c22db3457f0a76fa0fa23"
+    },
+    "mocha/mocha-node.d.ts": {
+      "commit": "ec9eb4b28c74665a602c22db3457f0a76fa0fa23"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "ec9eb4b28c74665a602c22db3457f0a76fa0fa23"
+    },
+    "mailparser/mailparser.d.ts": {
+      "commit": "ec9eb4b28c74665a602c22db3457f0a76fa0fa23"
     }
   }
 }
