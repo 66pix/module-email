@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "bluebird": "registry:npm/bluebird#3.3.4+20160406213700"
+    "bluebird": "registry:npm/bluebird#3.3.4+20160406213700",
+    "debug": "registry:npm/debug#2.0.0+20160211003958"
   },
   "ambientDependencies": {
     "convict": "registry:dt/convict#0.6.0+20160317120654",

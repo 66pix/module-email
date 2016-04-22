@@ -23,6 +23,7 @@ describe('email rendering', function () {
             }
         })
             .then(function (message) {
+            console.log(message);
             var emailContent = message.response.toString();
             var mailParserInstance = new mailparser.MailParser()
                 .on('end', function (mail) {

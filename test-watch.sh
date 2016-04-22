@@ -34,7 +34,7 @@ export EMAIL_HOST="localhost"
 export EMAIL_PASSWORD="email password"
 export EMAIL_USERNAME="email username"
 export EMAIL_PORT=1231
-export EMAIL_FROM="testing@66pix.com"
+export EMAIL_FROM="support@66pix.com"
 
 mkdir -p coverage
 nodemon -e ts \

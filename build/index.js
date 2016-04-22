@@ -1,6 +1,7 @@
 /// <reference path="../typings/main/definitions/bluebird/index.d.ts" />
 /// <reference path="../typings-custom/email-templates.d.ts" />
 /// <reference path="../typings/nodemailer/nodemailer.d.ts" />
+/// <reference path="../typings/main/definitions/debug/index.d.ts" />
 "use strict";
 var config = require('./config');
 var path = require('path');
@@ -8,11 +9,15 @@ var emailTemplates = require('email-templates');
 var EmailTemplate = emailTemplates.EmailTemplate;
 var Promise = require('bluebird');
 var nodemailer = require('nodemailer');
+var debugModule = require('debug');
+var debug = debugModule('66pix:email');
 var transporter;
 /* istanbul ignore if  */
 if (config.get('NODE_ENV') === 'production') {
+    debug('Preparing mailer with port: %s, host: %s, user: %s, from: %s', config.get('EMAIL_PORT'), config.get('EMAIL_HOST'), config.get('EMAIL_USERNAME'), config.get('EMAIL_FROM'));
     transporter = nodemailer.createTransport({
-        secure: true,
+        // service: 'SES',
+        secure: false,
         port: config.get('EMAIL_PORT'),
         host: config.get('EMAIL_HOST'),
         auth: {
@@ -35,6 +40,7 @@ var mailer = function (options) {
             .then(function (result) {
             options.text = result.text;
             options.html = result.html;
+            debug('sending email with options %o', options);
             transporter.sendMail(options, function (error, info) {
                 if (error) {
                     return reject(error);
