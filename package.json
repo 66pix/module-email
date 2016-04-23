@@ -12,7 +12,7 @@
   },
   "mail": "build/index.js",
   "scripts": {
-    "lint": " tslint -c tslint.json --exclude 'typings/**/*' --exclude 'node_modules/**/*' '**/*.ts'",
+    "lint": "tslint -c tslint.json --exclude 'typings/**/*' --exclude 'node_modules/**/*' '**/*.ts'",
     "typings-install": "typings install && tsd install",
     "build": "tsc typescript/index.ts typescript/test/**/*.ts -m commonjs --sourcemap --outDir build",
     "test": "docker-compose run test /srv/www/test.sh",
