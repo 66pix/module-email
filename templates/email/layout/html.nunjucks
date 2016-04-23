@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>{{ subject }}</title>
-    <link href="styles.css" media="all" rel="stylesheet" type="text/css" />
   </head>
 
   <body itemscope itemtype="http://schema.org/EmailMessage" class="bg">
@@ -16,7 +15,7 @@
             <table width="100%">
               <tr>
                 <td class="alignleft">
-                  <a href="{{ baseUrl }}"><img src="{{ baseUrl }}/images/logo/logo-80x80.png" alt="logo" /></a>
+                  <a href="{{ baseUrl }}"><img src="{{ baseUrl }}/images/logo/logo-80x80@2x.png" width="80" height="80" alt="66pix" /></a>
                 </td>
               </tr>
             </table>
