@@ -27,6 +27,7 @@ do
 done
 
 export NODE_ENV="development"
+export BASE_URL="https://66xix.com"
 
 export DEBUG=$DEBUG
 
