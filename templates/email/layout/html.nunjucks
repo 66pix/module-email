@@ -10,16 +10,16 @@
 
     <table class="body-wrap">
       <tr>
+        <td class="header dark-bg">
+          <table width="100%">
+            <tr>
+              <td class="alignleft">
+                <a href="{{ baseUrl }}"><img src="{{ baseUrl }}/images/logo/logo-80x80@2x.png" width="80" height="80" alt="66pix" /></a>
+              </td>
+            </tr>
+          </table>
+        </td>
         <td class="container" width="680">
-          <div class="header dark-bg content">
-            <table width="100%">
-              <tr>
-                <td class="alignleft">
-                  <a href="{{ baseUrl }}"><img src="{{ baseUrl }}/images/logo/logo-80x80@2x.png" width="80" height="80" alt="66pix" /></a>
-                </td>
-              </tr>
-            </table>
-          </div>
           <div class="content">
             <table width="100%" cellpadding="0" cellspacing="0">
               {{ html | safe }}

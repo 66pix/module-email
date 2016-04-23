@@ -1,7 +1,7 @@
 {
   "files": [
-    "index.ts",
-    "test/mail/email-rendering.ts"
+    "typescript/index.ts",
+    "typescript/test/mail/email-rendering.ts"
   ],
   "compilerOptions": {
     "module": "commonjs",
