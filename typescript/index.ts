@@ -35,13 +35,13 @@ if (config.get('NODE_ENV') === 'production') {
 }
 
 let templatePath = path.join(__dirname, '/../templates/email/layout/');
+let template = new EmailTemplate(templatePath);
+
 let mailer = (options: IMailerOptions): Promise<IMailerSentMessageInfo> => {
   options.from = config.get('EMAIL_FROM');
-  options.content.baseUrl = 'https://66pix.com/';
+  options.content.baseUrl = config.get('BASE_URL');
 
   return new Promise<nodemailer.SentMessageInfo>(function(resolve, reject) {
-    let template = new EmailTemplate(templatePath);
-
     template.render(options.content)
     .then(function(result) {
       options.text = result.text;

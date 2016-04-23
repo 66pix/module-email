@@ -42,6 +42,12 @@ let config = convict({
     format: String,
     doc: 'The password to be used when sending email.',
     env: 'EMAIL_PASSWORD'
+  },
+  BASE_URL: {
+    doc: 'The site URL for the environment\'s website',
+    format: String,
+    default: null,
+    env: 'BASE_URL'
   }
 });
 
