@@ -7,6 +7,7 @@ test:
         EMAIL_USERNAME: "email username"
         EMAIL_PORT: 1231
         EMAIL_FROM: "testing@66pix.com"
+        BASE_URL: "https://66pix.com"
     volumes:
         - .:/srv/www
     dns:
