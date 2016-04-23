@@ -19,6 +19,8 @@
             </tr>
           </table>
         </td>
+      </tr>
+      <tr>
         <td class="container" width="680">
           <div class="content">
             <table width="100%" cellpadding="0" cellspacing="0">
@@ -27,7 +29,6 @@
           </div>
           <div class="footer ">
             <table width="100%">
-
               <tr>
                 <td class="alignleft">
                   <div class="content">
@@ -36,13 +37,12 @@
                   </div>
                 </td>
               </tr>
-              <tr>
-                <td class="footer-bottom dark-bg">
-                </td>
-              </tr>
             </table>
           </div>
         </td>
+      </tr>
+      <tr>
+        <td class="footer-bottom dark-bg"></td>
       </tr>
     </table>
   </body>
