@@ -31,11 +31,11 @@ else {
     transporter = nodemailer.createTransport(stubTransport());
 }
 var templatePath = path.join(__dirname, '/../templates/email/layout/');
+var template = new EmailTemplate(templatePath);
 var mailer = function (options) {
     options.from = config.get('EMAIL_FROM');
-    options.content.baseUrl = 'https://66pix.com/';
+    options.content.baseUrl = config.get('BASE_URL');
     return new Promise(function (resolve, reject) {
-        var template = new EmailTemplate(templatePath);
         template.render(options.content)
             .then(function (result) {
             options.text = result.text;

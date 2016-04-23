@@ -1,4 +1,4 @@
 'use strict';
 
 /* istanbul ignore next */
-module.exports  = require('./build/index');
+module.exports = require('./build/index');

@@ -23,11 +23,10 @@ describe('email rendering', function () {
             }
         })
             .then(function (message) {
-            console.log(message);
             var emailContent = message.response.toString();
             var mailParserInstance = new mailparser.MailParser()
                 .on('end', function (mail) {
-                expect(mail.html.indexOf('<div>THIS IS THE HTML CONTENT</div>')).not.to.equal(-1);
+                expect(mail.html.indexOf('THIS IS THE HTML CONTENT')).not.to.equal(-1);
                 expect(mail.text.indexOf('THIS IS THE TEXT').length).not.to.equal(-1);
                 done();
             });
