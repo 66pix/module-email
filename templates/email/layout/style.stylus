@@ -1,3 +1,11 @@
+colour-black = #343434;
+colour-black = #030304;
+colour-white = #FFF;
+colour-pink = #FF0358;
+colour-grey = #555555;
+colour-blue = #4699CC;
+colour-red = #FF0000;
+
 /* -------------------------------------
     GLOBAL
     A very basic CSS reset
@@ -47,7 +55,7 @@ html, body {
   margin: 0 auto !important;
   /* makes it centered */
   clear: both !important;
-  background-color: white;
+  background-color: colour-white;
 }
 
 .content {
@@ -216,10 +224,10 @@ a {
   background-color: #FF9F00;
 }
 .alert.alert-bad {
-  background-color: #D0021B;
+  background-color: colour-red;
 }
 .alert.alert-good {
-  background-color: #68B90F;
+  background-color: colour-pink;
 }
 
 /* -------------------------------------
@@ -289,13 +297,6 @@ a {
   }
 }
 
-.black-bg {
-  background-color: black;
-}
-
 .dark-bg {
-  background-color: #343434;
+  background-color: colour-black;
 }
-
-
-/*# sourceMappingURL=styles.css.map */
