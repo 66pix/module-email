@@ -26,7 +26,7 @@
             <table width="100%" cellpadding="0" cellspacing="0">
               {{ html | safe }}
               <tr>
-                <td class="content-wrap">
+                <td class="content-wrap content-wrap--bottom">
                   <table width="100%" cellpadding="0" cellspacing="0">
                     <tr>
                       <td class="content-block">
