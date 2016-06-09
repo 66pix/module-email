@@ -1,6 +1,4 @@
-/// <reference path="../../../typings-custom/code.d.ts" />
-/// <reference path="../../../typings/mocha/mocha-node.d.ts" />
-/// <reference path="../../../typings/mailparser/mailparser.d.ts" />
+/// <reference path="../../../typings/index.d.ts" />
 "use strict";
 var Code = require('code');
 var index_1 = require('../../index');

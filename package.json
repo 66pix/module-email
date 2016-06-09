@@ -13,7 +13,7 @@
   "mail": "build/index.js",
   "scripts": {
     "lint": "tslint -c tslint.json --exclude 'typings/**/*' --exclude 'node_modules/**/*' '**/*.ts'",
-    "typings-install": "typings install && tsd install",
+    "typings-install": "typings install",
     "build": "tsc typescript/index.ts typescript/test/**/*.ts -m commonjs --sourcemap --outDir build",
     "test": "docker-compose run test /srv/www/test.sh",
     "test-watch": "docker-compose run test /srv/www/test-watch.sh",
@@ -40,7 +40,6 @@
     "istanbul": "^0.4.3",
     "mailparser": "^0.5.3",
     "mocha": "^2.4.5",
-    "tsd": "^0.6.5",
     "tslint": "^3.9.0",
     "typescript": "^1.8.10",
     "typings": "^0.8.1"

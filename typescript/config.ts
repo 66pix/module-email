@@ -1,4 +1,4 @@
-/// <reference path="../typings/main/ambient/convict/index.d.ts" />
+/// <reference path="../typings/index.d.ts" />
 
 import convict = require('convict');
 

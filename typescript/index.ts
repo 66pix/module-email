@@ -1,7 +1,4 @@
-/// <reference path="../typings/main/definitions/bluebird/index.d.ts" />
-/// <reference path="../typings-custom/email-templates.d.ts" />
-/// <reference path="../typings/nodemailer/nodemailer.d.ts" />
-/// <reference path="../typings/main/definitions/debug/index.d.ts" />
+/// <reference path="../typings/index.d.ts" />
 
 import config = require('./config');
 import path = require('path');
@@ -42,7 +39,7 @@ let mailer = (options: IMailerOptions): Promise<IMailerSentMessageInfo> => {
   options.content.baseUrl = config.get('BASE_URL');
 
   return new Promise<nodemailer.SentMessageInfo>(function(resolve, reject) {
-    template.render(options.content)
+    (template as any).render(options.content)
     .then(function(result) {
       options.text = result.text;
       options.html = result.html;
