@@ -8,6 +8,7 @@ let config = convict({
     format: [
       'production',
       'development',
+      'staging',
       'test'
     ],
     default: 'development',
