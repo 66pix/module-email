@@ -5,6 +5,8 @@ set -o errexit
 
 echo "Building"
 
+ls -lh
+
 npm install --silent
 
 echo "NSP"
