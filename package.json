@@ -50,7 +50,7 @@
   },
   "homepage": "https://github.com/66pix/module-email#readme",
   "lambci": {
-    "cmd": "./test-lambci.sh",
+    "cmd": "nave use 5 bash -c './test-lambci.sh'",
     "build": true,
     "branches": {
       "master": {
