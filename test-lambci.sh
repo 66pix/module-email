@@ -7,7 +7,7 @@ echo "Building"
 
 ls -lh
 
-npm install --silent
+npm install
 
 echo "NSP"
 
